@@ -1,0 +1,27 @@
+{
+  "name": "rosni-ai-news-agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:pipeline": "node src/pipeline.js",
+    "start:ui": "node src/server/index.js",
+    "start:cron": "node src/cron.js",
+    "start": "node src/server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/genai": "^2.14.0",
+    "@huggingface/inference": "^4.13.23",
+    "@supabase/supabase-js": "^2.111.0",
+    "cheerio": "^1.2.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "node-cron": "^4.6.0",
+    "puppeteer": "^25.4.0"
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosni News - Published</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .btn-export {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid var(--glass-border);
+      color: white;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-export:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .readonly-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-main);
+      background: rgba(0,0,0,0.2);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .headline-readonly {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    .subline-readonly {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-mesh"></div>
+  <header class="glass-header">
+    <div class="logo">
+      <span class="logo-icon">🌿</span>
+      <h1>Rosni News Agent</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="/">Review</a>
+      <a href="/published.html" class="active">Published</a>
+      <a href="/notifications.html">Notifications</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn-export" onclick="exportJSON()">JSON ⬇</button>
+      <button class="btn-export" onclick="exportCSV()">CSV ⬇</button>
+      <span class="badge" id="published-count" style="background: rgba(56, 189, 248, 0.2); color: #7dd3fc; border-color: rgba(56, 189, 248, 0.3);">Loading...</span>
+    </div>
+  </header>
+  <main>
+    <div class="container" id="news-container">
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Fetching published articles...</p>
+      </div>
+    </div>
+  </main>
+  <script src="published.js"></script>
+</body>
+</html>
